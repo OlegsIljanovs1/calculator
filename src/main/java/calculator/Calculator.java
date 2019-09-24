@@ -14,10 +14,15 @@ public class Calculator {
 
         double result = calc(a, op1, b);
 
-        if(expression.length == 5){
+        if(expression.length >= 5){
             String op2 = expression[3];
             String c = expression[4];
             result = calc(Double.toString(result), op2, c);
+        }
+        if(expression.length == 7){
+            String op3 = expression[5];
+            String d = expression[6];
+            result = calc(Double.toString(result), op3, d);
         }
         return Double.toString(result);
 
