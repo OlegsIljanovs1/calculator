@@ -19,10 +19,15 @@ public class Calculator {
             String c = expression[4];
             result = calc(Double.toString(result), op2, c);
         }
-        if(expression.length == 7){
+        if(expression.length >= 7) {
             String op3 = expression[5];
             String d = expression[6];
             result = calc(Double.toString(result), op3, d);
+        }
+            if(expression.length == 9){
+                String op4 = expression[7];
+                String e = expression[8];
+                result = calc(Double.toString(result), op4, e);
         }
         return Double.toString(result);
 
